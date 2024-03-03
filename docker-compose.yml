@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  gh-runner:
+    pull_policy: build
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    environment:
+      ORGANIZATION: ${GITHUB_ORG}
+      ACCESS_TOKEN: ${GITHUB_ACCESS_TOKEN}
