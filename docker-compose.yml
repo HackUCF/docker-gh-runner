@@ -10,3 +10,6 @@ services:
     environment:
       ORGANIZATION: ${GITHUB_ORG}
       ACCESS_TOKEN: ${GITHUB_ACCESS_TOKEN}
+    deploy:
+      mode: replicated
+      replicas: 3
