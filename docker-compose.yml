@@ -2,11 +2,9 @@ version: '3'
 
 services:
   gh-runner:
-    pull_policy: build
+    image: ghcr.io/hackucf/docker-gh-runner:latest
+    pull_policy: always
     restart: always
-    build:
-      context: ./
-      dockerfile: Dockerfile
     environment:
       ORGANIZATION: ${GITHUB_ORG}
       ACCESS_TOKEN: ${GITHUB_ACCESS_TOKEN}
