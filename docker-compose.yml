@@ -5,6 +5,8 @@ services:
     image: ghcr.io/hackucf/docker-gh-runner:latest
     pull_policy: always
     restart: always
+    devices:
+      - /dev/kvm:/dev/kvm
     environment:
       ORGANIZATION: ${GITHUB_ORG}
       ACCESS_TOKEN: ${GITHUB_ACCESS_TOKEN}

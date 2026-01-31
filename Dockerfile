@@ -11,7 +11,7 @@ RUN apt-get update -y && apt-get upgrade -y && useradd -m docker && mkdir -p /et
 # add additional packages as necessary
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
     curl jq build-essential libssl-dev libffi-dev python3 python3-venv python3-dev python3-pip unzip git libicu-dev yq rsync \
-    openssh-client nodejs npm sudo
+    openssh-client nodejs npm sudo zstd udev
 
 # Install GitHub CLI
 RUN curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg \
